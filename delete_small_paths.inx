@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <name>Delete Small Paths</name>
+  <id>org.inkscape.tutorial.delete_small_paths</id>
+  <label>Selected objects under the given sizes will be deleted. You may need to ungroup and or break apart objects first.</label>
+  <param name="minimumwidth" type="float" min="0.0" max="100000000.0" precision="2" gui-text="minimumwidth:" gui-description="Minimum Width">1.00</param>
+  <param name="minimumheight" type="float" min="0.0" max="100000000.0" precision="2" gui-text="minimumheight:" gui-description="Minimum Height">1.00</param>
+  <effect>
+    <effects-menu>
+      <submenu name="Document"/>
+    </effects-menu>
+  </effect>
+  <script>
+    <command location="inx" interpreter="python">delete_small_paths.py</command>
+  </script>
+</inkscape-extension>
