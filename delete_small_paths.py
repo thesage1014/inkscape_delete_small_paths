@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding=utf-8
 #
-# Copyright (C) [YEAR] [YOUR NAME], [YOUR EMAIL]
+# Copyright (C) 2025 Eric Pugh, hedron.hackerspace@gmail.com
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -26,8 +26,8 @@ import inkex
 class DeleteSmallPaths(inkex.EffectExtension):
     """EffectExtension to delete selected objects under a given size"""
     def add_arguments(self, pars):
-        pars.add_argument("--minimumwidth", type=float, default=1.0, help="Minimum Width")
-        pars.add_argument("--minimumheight", type=float, default=1.0, help="Minimum Height")
+        pars.add_argument("--minimumwidth", type=float, default=1.0, help="Minimum Width in px")
+        pars.add_argument("--minimumheight", type=float, default=1.0, help="Minimum Height in px")
 
     def effect(self):
         for elem in self.svg.selection:
